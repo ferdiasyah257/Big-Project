@@ -1,0 +1,77 @@
+[
+    {
+        "name": "Sandisk Ultra 128GB UHS-I Memory Card up to 80MB/s",
+        "price": "45.89",
+        "description": "Ultra-fast cards (2) ",
+        "ratings": 4.5,
+        "images": [{
+            "public_id": "product/sandisk_r4btxf",
+            "url": "https://res.cloudinary.com/ferd/image/upload/v1614261262/sandisk_r4btxf.jpg"
+        }],
+        "category": "Electronic",
+        "seller": "Ebay",
+        "stock": 50,
+        "numberOfReviews": 32,
+        "reviews": []
+    },
+    {
+        "name": "Sandisk",
+        "price": "45.89",
+        "description": "Ultra-fast cards (2) ",
+        "ratings": 4,
+        "images": [{
+            "public_id": "product/sandisk_r4btxf",
+            "url": "https://res.cloudinary.com/ferd/image/upload/v1614261262/sandisk_r4btxf.jpg"
+        }],
+        "category": "Accessories",
+        "seller": "Ebay",
+        "stock": 550,
+        "numberOfReviews": 32,
+        "reviews": []
+    },
+    {
+        "name": "Laptop Acer",
+        "price": "45.89",
+        "description": "Ultra-fast cards (2) ",
+        "ratings": 4,
+        "images": [{
+            "public_id": "product/sandisk_r4btxf",
+            "url": "https://res.cloudinary.com/ferd/image/upload/v1614261262/sandisk_r4btxf.jpg"
+        }],
+        "category": "Laptop",
+        "seller": "Ebay",
+        "stock": 550,
+        "numberOfReviews": 32,
+        "reviews": []
+    },
+    {
+        "name": "Apple",
+        "price": "45.89",
+        "description": "Ultra-fast cards (2) ",
+        "ratings": 4,
+        "images": [{
+            "public_id": "product/sandisk_r4btxf",
+            "url": "https://res.cloudinary.com/ferd/image/upload/v1614261262/sandisk_r4btxf.jpg"
+        }],
+        "category": "Laptop",
+        "seller": "Ebay",
+        "stock": 550,
+        "numberOfReviews": 32,
+        "reviews": []
+    },
+    {
+        "name": "Samsung",
+        "price": "45.89",
+        "description": "Ultra-fast cards (2) ",
+        "ratings": 4,
+        "images": [{
+            "public_id": "product/sandisk_r4btxf",
+            "url": "https://res.cloudinary.com/ferd/image/upload/v1614261262/sandisk_r4btxf.jpg"
+        }],
+        "category": "Electronic",
+        "seller": "Ebay",
+        "stock": 550,
+        "numberOfReviews": 32,
+        "reviews": []
+    }
+]
