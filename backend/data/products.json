@@ -11,7 +11,7 @@
         "category": "Electronic",
         "seller": "Ebay",
         "stock": 50,
-        "numberOfReviews": 32,
+        "numOfReviews": 32,
         "reviews": []
     },
     {
@@ -26,7 +26,7 @@
         "category": "Accessories",
         "seller": "Ebay",
         "stock": 550,
-        "numberOfReviews": 32,
+        "numOfReviews": 32,
         "reviews": []
     },
     {
@@ -41,7 +41,7 @@
         "category": "Laptop",
         "seller": "Ebay",
         "stock": 550,
-        "numberOfReviews": 32,
+        "numOfReviews": 3112,
         "reviews": []
     },
     {
@@ -56,7 +56,7 @@
         "category": "Laptop",
         "seller": "Ebay",
         "stock": 550,
-        "numberOfReviews": 32,
+        "numOfReviews": 32,
         "reviews": []
     },
     {
@@ -71,7 +71,7 @@
         "category": "Electronic",
         "seller": "Ebay",
         "stock": 550,
-        "numberOfReviews": 32,
+        "numOfReviews": 32,
         "reviews": []
     }
 ]
