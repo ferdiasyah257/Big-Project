@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Product = ({ product, col }) => {
   return (
-    <div className="row">
-      <div className={`col-sm-12 col-md-4 col-lg-${col} my-3`}>
+
+      <div className={`col-sm-12 col-md-6 col-lg-${col} my-3`}>
         <div className="card p-3 rounded">
           <img className="card-img-top mx-auto" src={product.images[0].url} />
           <div className="card-body d-flex flex-column">
@@ -31,7 +31,7 @@ const Product = ({ product, col }) => {
           </div>
         </div>
       </div>
-    </div>
+
   );
 };
 
