@@ -6,7 +6,7 @@ const sendToken = require ('../utils/jwtToken')
 const sendEmail = require('../utils/sendEmail')
 
 const cloudinary = require('cloudinary')
-const crypto = require('crypto')
+const crypto = require('crypto');
 
 //Resgister a user => /api/v1/register
 exports.registerUser = catchAsyncError( async (req, res, next) => {
@@ -74,7 +74,7 @@ exports.forgotPassword = catchAsyncError(async (req, res, next) => {
     await user.save({ validateBeforeSave: false })
 
     //Craete reset password url
-    const resetUrl = `${req.protocol}://${req.get('host')}/api/v1/password/reset/${resetToken}`
+    const resetUrl = `${process.env.FRONT_END_URL}/password/reset/${resetToken}`
 
     const message = `Your password reset token is as follow:\n\n${resetUrl}\n\nIf you have not requested this email, then ignore it`
 
@@ -115,9 +115,9 @@ exports.resetPassword = catchAsyncError(async (req, res, next) => {
         return next(new ErrorHandler('Password reset token is invalid or has been expired', 400))
     }
 
-    if (req.body.password !== req.body.confirmpassword) {
-        return next(new ErrorHandler('Password does not match', 400))
-    }
+    // if (req.body.password !== req.body.confirmPassword) {
+    //     return next(new ErrorHandler('Password does not match', 400))
+    // }
 
     // Setup new password
     user.password = req.body.password;
@@ -164,7 +164,25 @@ exports.updateProfile = catchAsyncError(async (req, res, next) => {
         email: req.body.email
     }
 
-    //Update avatar: TODO
+    //Update avatar
+    if (req.body.avatar !== '') {
+        const user = await User.findById(req.user.id)
+
+        const image_id = user.avatar.public_id;
+        const res = await cloudinary.v2.uploader.destroy(image_id);
+
+        const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
+            folder: 'avatar',
+            width: 150,
+            crop: "scale"
+        })
+
+        newUserData.avatar = {
+            public_id: result.public_id,
+            url: result.secure_url
+        }
+    }
+
 
     const user = await User.findByIdAndUpdate(req.user.id, newUserData, {
         new: true,
@@ -224,7 +242,7 @@ exports.updateUser = catchAsyncError(async (req, res, next) => {
         role: req.body.role
     }
 
-    //Update avatar: TODO
+    //Update avatar
 
     const user = await User.findByIdAndUpdate(req.params.id, newUserData, {
         new: true,
