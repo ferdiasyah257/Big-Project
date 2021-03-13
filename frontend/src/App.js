@@ -50,7 +50,6 @@ function App() {
           <ProtectedRoute path="/me/update" component={UpdateProfile} exact />
           <ProtectedRoute path="/password/update" component={UpdatePassword} exact />
 
-
         </div>
         <Footer />
       </div>
