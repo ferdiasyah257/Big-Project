@@ -4,6 +4,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 
+import Cart from './components/cart/Cart'
+import Shipping from './components/cart/Shipping'
+
+import {HomePage} from './components/layout/HomePage'
 import Home from './components/Home'
 import ProductDetails from './components/product/ProductDetails'
 
@@ -30,9 +34,13 @@ function App() {
       <div className="App">
         <Header />
         <div className="container container-fluid">
-          <Route path="/" component={Home} exact />
+          <Route path="/" component={HomePage} exact />
+          <Route path="/home" component={Home} exact />
           <Route path="/search/:keyword" component={Home} />
           <Route path="/product/:id" component={ProductDetails} exact />
+
+          <Route path="/cart" component={Cart} exact />
+          <ProtectedRoute path="/shipping" component={Shipping} exact />
 
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
