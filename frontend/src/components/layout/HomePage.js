@@ -16,11 +16,12 @@ const HomePage = () => {
 
         <div className="row">
             <div className="col" >
-                <button className="btn btn-dark" style={{marginLeft: "100px"}}>
                 <Link to="./home">
+                <button className="btn btn-dark" style={{marginLeft: "100px"}}>
+                
                 <span className="tombol" >Shop Now</span>
-                </Link>
                 </button>
+                </Link>
             </div>
 
             <div className="col">
