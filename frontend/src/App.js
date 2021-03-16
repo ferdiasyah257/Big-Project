@@ -33,6 +33,8 @@ import Dashboard from './components/admin/Dashboard'
 import ProductsList from './components/admin/ProductsList'
 import NewProduct from './components/admin/NewProduct'
 import UpdateProduct from './components/admin/UpdateProduct'
+import OrderList from './components/admin/OrderList'
+import ProcessOrder from './components/admin/ProcessOrder'
 
 import ProtectedRoute from './components/route/ProtectedRoute'
 import { loadUser } from "./actions/userActions";
@@ -66,9 +68,10 @@ function App() {
   return (
     <Router>
       <div className="App">
+        
           <Header />
         
-        <div className="container container-fluid">
+        <div className="container container-fluid">  
           <Route path="/" component={HomePage} exact />
           <Route path="/home" component={Home} exact />
           <Route path="/search/:keyword" component={Home} />
@@ -100,6 +103,8 @@ function App() {
           <ProtectedRoute path="/admin/products" isAdmin={true} component={ProductsList} exact />
           <ProtectedRoute path="/admin/product" isAdmin={true} component={NewProduct} exact />
           <ProtectedRoute path="/admin/product/:id" isAdmin={true} component={UpdateProduct} exact />
+          <ProtectedRoute path="/admin/orders" isAdmin={true} component={OrderList} exact />
+          <ProtectedRoute path="/admin/order/:id" isAdmin={true} component={ProcessOrder} exact />
 
           {!loading && (!isAuthenticated || user.role !== 'admin') && (
           <Footer />

@@ -24,7 +24,7 @@ const Sidebar = () => {
                         </ul>
                     </li>
 
-                    {/* <li>
+                    <li>
                         <Link to="/admin/orders"><i className="fa fa-shopping-basket"></i> Orders</Link>
                     </li>
 
@@ -34,7 +34,7 @@ const Sidebar = () => {
 
                     <li>
                         <Link to="/admin/reviews"><i className="fa fa-star"></i> Reviews</Link>
-                    </li> */}
+                    </li>
 
                 </ul>
             </nav>
